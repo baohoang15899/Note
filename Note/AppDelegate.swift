@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let shared = AppDelegate()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window?.rootViewController = UINavigationController.init(rootViewController: HomeViewController())
+        window?.rootViewController = UINavigationController.init(rootViewController: AloViewController())
         window?.makeKeyAndVisible()
         return true
     }

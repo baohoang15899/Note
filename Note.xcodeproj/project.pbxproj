@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176F6FEA283CEA9E00F5FC96 /* AloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F6FE8283CEA9E00F5FC96 /* AloViewController.swift */; };
+		176F6FEB283CEA9E00F5FC96 /* AloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176F6FE9283CEA9E00F5FC96 /* AloViewController.xib */; };
 		17A5A0D7283B69D5005C5B1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5A0D6283B69D5005C5B1C /* AppDelegate.swift */; };
 		17A5A0E1283B69D5005C5B1C /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17A5A0DF283B69D5005C5B1C /* Note.xcdatamodeld */; };
 		17A5A0E3283B69D7005C5B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A5A0E2283B69D7005C5B1C /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		176F6FE8283CEA9E00F5FC96 /* AloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AloViewController.swift; sourceTree = "<group>"; };
+		176F6FE9283CEA9E00F5FC96 /* AloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AloViewController.xib; sourceTree = "<group>"; };
 		17A5A0D3283B69D5005C5B1C /* Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5A0D6283B69D5005C5B1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A5A0E0283B69D5005C5B1C /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		176F6FE7283CEA7700F5FC96 /* Alo */ = {
+			isa = PBXGroup;
+			children = (
+				176F6FE8283CEA9E00F5FC96 /* AloViewController.swift */,
+				176F6FE9283CEA9E00F5FC96 /* AloViewController.xib */,
+			);
+			path = Alo;
+			sourceTree = "<group>";
+		};
 		17A5A0CA283B69D5005C5B1C = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +165,7 @@
 		17A5A109283B69E0005C5B1C /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				176F6FE7283CEA7700F5FC96 /* Alo */,
 				17D63EB8283B996F00FA9741 /* DisplayViewModel */,
 				17A5A10A283B69F7005C5B1C /* Home */,
 			);
@@ -317,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176F6FEB283CEA9E00F5FC96 /* AloViewController.xib in Resources */,
 				17A5A0E6283B69D7005C5B1C /* LaunchScreen.storyboard in Resources */,
 				17A5A0E3283B69D7005C5B1C /* Assets.xcassets in Resources */,
 				17D63EB5283B797600FA9741 /* HomeTableViewCell.xib in Resources */,
@@ -355,6 +370,7 @@
 				17D63EB4283B797600FA9741 /* HomeTableViewCell.swift in Sources */,
 				17D63EAB283B701300FA9741 /* Folder+CoreDataClass.swift in Sources */,
 				17D63EA2283B6CDD00FA9741 /* UIcolor.swift in Sources */,
+				176F6FEA283CEA9E00F5FC96 /* AloViewController.swift in Sources */,
 				17D63EBA283B998900FA9741 /* HomeTableViewCellViewModel.swift in Sources */,
 				17D63EA6283B6DA100FA9741 /* Common.swift in Sources */,
 			);

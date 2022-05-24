@@ -13,8 +13,9 @@ class HomeViewModel {
     private var folders: [Folder] = []
     private var items: [HomeTableViewCellViewModel] = []
     private let context = AppDelegate.shared.persistentContainer.viewContext
-
+    
     func fetchData() {
+        isEdit = false
         do {
             folders = try context.fetch(Folder.fetchRequest())
             items = folders.compactMap { item in
@@ -31,6 +32,21 @@ class HomeViewModel {
     
     func edit() -> Bool {
         return isEdit
+    }
+    
+    func updateFolder(folderName: String,  completion:() -> Void, index: Int) {
+        isEditTap = true
+        folders[index].name = folderName
+        items.forEach { item in
+            item.isChecked = false
+        }
+        do {
+            try context.save()
+            fetchData()
+            completion()
+        } catch {
+            print("Can't save data")
+        }
     }
     
     func addFolder(folderName: String, completion:() -> Void) {
@@ -68,7 +84,7 @@ class HomeViewModel {
     }
     
     func editTap(completion: ((Bool)) -> Void) {
-        self.isEditTap = true
+        isEditTap = true
         items.forEach { item in
             item.isChecked = false
         }
@@ -90,7 +106,7 @@ class HomeViewModel {
     func numberOfItem() -> Int {
         return items.count
     }
-
+    
     func itemAtIndex(index: Int) -> HomeTableViewCellViewModel {
         if index >= 0 && index < items.count {
             return items[index]

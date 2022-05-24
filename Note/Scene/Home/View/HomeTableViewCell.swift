@@ -41,8 +41,10 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     func configure(item: HomeTableViewCellViewModel, isEdit: Bool, isEditTap: Bool) {
-        lbName.text = item.folder.name ?? ""
         if isEditTap {
+            UIView.transition(with: self.contentView, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                self.lbName.text = item.folder.name ?? ""
+            }, completion: nil)
             UIView.animate(withDuration: 0.3) {
                 self.cstLeadingImageView.constant = isEdit ? 20 : -20
                 self.cstLeadingLabel.constant = isEdit ? 8 : 22
@@ -53,7 +55,24 @@ class HomeTableViewCell: UITableViewCell {
                 UIImage(named: "circleCheckmark") :
                 UIImage(named: "circle")
             }, completion: nil)
+        } else {
+            cstLeadingImageView.constant = -20
+            cstLeadingLabel.constant = 22
+            lbName.text = item.folder.name ?? ""
         }
+    }
+    
+    func animateCell() {
+        self.alpha = 0
+        UIView.animate(withDuration: 0.2) {
+            self.alpha = 1
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cstLeadingImageView.constant = -20
+        cstLeadingLabel.constant = 22
     }
     
     @objc
